@@ -1,6 +1,9 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
+#_*_coding:utf-8_*_
+from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+    return render(request, 'blog/index.html', context={
+                    'title': '触手可及', 
+                    'welcome': 'Welcome to my blog'
+                })
