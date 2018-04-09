@@ -38,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
+    margin-top: -1cm;
 }
 
 b {
@@ -105,7 +105,8 @@ img {
 
 #site-header {
     background-color: #FFF;
-    padding: 25px 20px;
+    background-image: url(../img/header.jpg);
+    padding: 20px 20px 300px 20px;
     margin-bottom: 40px;
     border-bottom: 1px solid #e7e7e7;
 }
@@ -123,7 +124,7 @@ img {
  */
 
 .logo h1 a {
-    color: #000;
+    color: #FFF;
 }
 
 .logo h1 a:hover {
@@ -133,8 +134,8 @@ img {
 
 .logo h1 {
     margin: 0;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-weight: 700;
 }
 
 /**
@@ -147,7 +148,7 @@ img {
 }
 
 .main-nav a {
-    color: #000000 !important;
+    color: #FFF !important;
     padding: 0 0 5px 0 !important;
     margin-right: 30px;
     font-family: 'Lato', sans-serif;

@@ -8,7 +8,10 @@
                 <span class="post-date"><a href="#"><time class="entry-date"
                                                           datetime="{{ post.created_time }}">{{ post.created_time }}</time></a></span>
                 <span class="post-author"><a href="#">{{ post.author }}</a></span>
-                <span class="comments-link"><a href="#">4 评论</a></span>
+                <span class="comments-link">
+                    <!--a href="#">4 评论</a-->
+                    <a href="{{ post.get_absolute_url }}#comment-area">{{ post.comment_set.count }} 评论</a>
+                </span>
                 <span class="views-count"><a href="#">588 阅读</a></span>
             </div>
         </header>
@@ -68,19 +71,19 @@
         <h3 class="widget-title">文章目录</h3>
         <ul>
             <li>
-                <a href="#">教程特点</a>
+                <a href="#">Python</a>
             </li>
             <li>
-                <a href="#">谁适合这个教程</a>
+                <a href="#">Linux</a>
             </li>
             <li>
-                <a href="#">在线预览</a>
+                <a href="#">HTTP</a>
             </li>
             <li>
-                <a href="#">资源列表</a>
+                <a href="#">SQL</a>
             </li>
             <li>
-                <a href="#">获取帮助</a>
+                <a href="#">More...</a>
             </li>
         </ul>
     </div>

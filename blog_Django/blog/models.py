@@ -37,8 +37,10 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
     # 文章作者
     author = models.ForeignKey(User)
-
     def __str__(self):
         return self.title
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'pk': self.pk})
+    class Meta:
+      #  ordering = ['created_time']
+        ordering = ['-created_time','title']
