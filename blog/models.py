@@ -25,8 +25,8 @@ class Post(models.Model):
     # 文章正文
     body = models.TextField()
     # 创建时间
-    # 修改时间
     created_time = models.DateTimeField()
+    # 修改时间
     modified_time = models.DateTimeField()
     # 文章摘要
     # blank=True 参数值后就可以允许空值了。
@@ -37,6 +37,11 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
     # 文章作者
     author = models.ForeignKey(User)
+    #文章阅读量
+    views = models.PositiveIntegerField(default=0)
+    def increase_views(self):
+        self.views += 1
+        self.save(update_fields=['views'])
     def __str__(self):
         return self.title
     def get_absolute_url(self):
