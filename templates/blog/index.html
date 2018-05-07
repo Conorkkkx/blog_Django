@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% block main %}
+	{% if error_msg %}
+    	<p>{{ error_msg }}</p>
+  	{% endif %}
     {% for post in post_list %}
         <article class="post post-{{ post.pk }}">
             <header class="entry-header">
@@ -18,9 +21,9 @@
                 </div>
             </header>
             <div class="entry-content clearfix">
-                <p>{{ post.excerpt }}</p>
+                <p>{{ post.body | truncatechars:54 }}</p>
                 <div class="read-more cl-effect-14">
-                    <a href="{{ post.get_absolute_url }}" class="more-link">CONTINUE</a>
+                    <a href="{{ post.get_absolute_url }}" class="more-link">CONTINUE<span class="meta-nav">→</span></a>
                 </div>
             </div>
         </article>
