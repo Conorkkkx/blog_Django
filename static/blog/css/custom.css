@@ -185,6 +185,16 @@ img {
     text-shadow: none;
 }
 
+.ui.vertical.basic.segment.masthead {
+    height: 700px;
+    background: url('img/banner1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
 .cl-effect-11 a::before {
     position: absolute;
     top: 0;
